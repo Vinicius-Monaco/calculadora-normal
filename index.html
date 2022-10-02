@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+            font-family: 'Barlow', sans-serif;
+            }
+
+        .resultado {
+            padding: 0;
+            border-radius: 5px; 
+            overflow: hidden;
+            background-color: gainsboro;
+        }
+
+        .resultado span {
+            font-size: 200%;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .col-4, .resultado, .botoes-op {
+            border: 1px solid gray;
+            height: 50px;
+            padding: 0;
+        }
+
+        button {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 25px;
+            font-weight: 1000;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="col-6 m-0">
+        <div class="resultado">
+            <span id="tela"></span>
+        </div>
+        <div class="row m-0 mt-3">
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-4">
+                        <button id="n7">7</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="n8">8</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="n9">9</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <button id="n4">4</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="n5">5</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="n6">6</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <button id="n1">1</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="n2">2</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="n3">3</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <button id="n0">0</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="nponto">.</button>
+                    </div>
+                    <div class="col-4">
+                        <button id="nigual">=</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row">
+                    <div class="botoes-op">
+                        <button id="ndivisao">/</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="botoes-op">
+                        <button id="nmultiplicacao">*</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="botoes-op">
+                        <button id="nsubtracao">-</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="botoes-op">
+                        <button id="nsoma">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <!-- SCRIPT PÁGINA -->
+    <script>
+                var n1 = "";
+        var num2;
+        var num1;
+        var num3;
+        var aux;
+
+        document.getElementById("n0").addEventListener("click", function() {
+            n1 = n1 + "0";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("n1").addEventListener("click", function() {
+            n1 = n1 + "1";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("n2").addEventListener("click", function() {
+            n1 = n1 + "2";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("n3").addEventListener("click", function() {
+            n1 = n1 + "3";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("n4").addEventListener("click", function() {
+            n1 = n1 + "4";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("n5").addEventListener("click", function() {
+            n1 = n1 + "5";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("n6").addEventListener("click", function() {
+            n1 = n1 + "6";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("n7").addEventListener("click", function() {
+            n1 = n1 + "7";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("n8").addEventListener("click", function() {
+            n1 = n1 + "8";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("n9").addEventListener("click", function() {
+            n1 = n1 + "9";
+            document.getElementById("tela").textContent = n1;
+        });
+        document.getElementById("nponto").addEventListener("click", function() {
+            n1 = n1 + ".";
+            document.getElementById("tela").textContent = n1;
+        });
+
+        document.getElementById("nsoma").addEventListener("click", function() {
+            aux = 1;
+            num1 = parseFloat(n1).toFixed(2);
+            document.getElementById("tela").textContent = "";
+            document.getElementById("tela").innerHTML = "<sup>+</sub>";
+            n1 = "";
+        });
+
+        document.getElementById("nsubtracao").addEventListener("click", function() {
+            aux = 2;
+            num1 = parseFloat(n1).toFixed(2);
+            document.getElementById("tela").textContent = "";
+            document.getElementById("tela").innerHTML = "<sup>-</sub>" ;
+            n1 = "";
+        });
+
+        document.getElementById("ndivisao").addEventListener("click", function() {
+            aux = 3;
+            num1 = parseFloat(n1).toFixed(2);
+            document.getElementById("tela").textContent = "";
+            document.getElementById("tela").innerHTML = "<sup>/</sub>";
+            n1 = "";
+        });
+
+        document.getElementById("nmultiplicacao").addEventListener("click", function() {
+            aux = 4;
+            num1 = parseFloat(n1).toFixed(2);
+            document.getElementById("tela").textContent = "";
+            document.getElementById("tela").innerHTML = "<sup>*</sub>";
+            n1 = "";
+        });
+
+        document.getElementById("nigual").addEventListener("click", function() {
+            num2 = parseFloat(n1).toFixed(2);
+            switch (aux) {
+                case 1: num3 = parseFloat(num1) + parseFloat(num2);
+                break;
+                case 2: num3 = num1 - num2;
+                break;
+                case 3: num3 = num1 / num2;
+                break;
+                case 4: num3 = num1 * num2;
+            }
+            var a = parseFloat(num3).toFixed(2);
+
+            document.getElementById("tela").textContent = a;
+            n1 = "";
+            num1 = "";
+            num2 = "";
+            num3 = "";
+            aux = "";
+        });
+    </script>
+</body>
+</html>
